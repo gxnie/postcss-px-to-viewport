@@ -59,7 +59,7 @@ module.exports = postcss.plugin('postcss-px-to-viewport', function (options) {
         }
       }
 
-      css.walkDecls(function (decl, i) {
+      rule.walkDecls(function (decl, i) {
         // This should be the fastest test and will remove most declarations
         if (
           decl.value.indexOf(opts.unitToConvert) === -1 &&
